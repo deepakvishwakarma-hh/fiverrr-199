@@ -20,9 +20,14 @@ import App from "./App";
 import { ThemeProvider } from "@mui/material/styles";
 
 import theme from "./themes/defaultTheme";
+import MetaTags from 'react-meta-tags'
 
 ReactDOM.render(
   <ThemeProvider theme={theme}>
+    <MetaTags>
+      <title>App</title>
+      <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+    </MetaTags>
     <App />
   </ThemeProvider>,
   document.getElementById("root")
